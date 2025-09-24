@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- doctype declaration -->
+<html lang="en"> <!-- lang attribute added -->
+
+<!-- David Kovach-Fuentes -->
+<!-- 9/24/2025 -->
+<!-- Lab 3: Recipe Sharing Website -->
+
+<head>
+
+    <!-- character encoding -->
+    <meta charset="UTF-8">
+    <!-- tab title -->
+    <title>Recipe Website </title>
+
+</head>
+
+<body>
+
+    <!-- main header -->
+    <h1> Submission </h1>
+
+    <form action="index.html" method="get">
+        <p>
+            <label for="dish">Dish Name</label>
+            <input type="text" id="dish" name="dish" size="15" maxlength="30">
+        </p>
+        <textarea
+            name="comment"
+            id="comment_area"
+            placeholder= "Enter Ingredients">
+        </textarea>
+        <p>
+            <label>
+                <input type="radio" name="dl" value="e"> Easy
+            </label>
+            <label>
+                <input type="radio" name="dl" value="m"> Medium
+            </label>
+            <label>
+                <input type="radio" name="dl" value="h"> Hard
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" name="diet" value="veg"> Vegetarian
+            </label>
+            <label>
+                <input type="checkbox" name="diet" value="vgn"> Vegan
+            </label>
+        </p>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+
+
+    </form>
+
+
+</body>
+
+</html>
