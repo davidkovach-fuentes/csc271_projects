@@ -1,0 +1,94 @@
+<!DOCTYPE html> <!-- doctype declaration -->
+<html lang="en"> <!-- lang attribute added -->
+
+<!-- David Kovach-Fuentes -->
+<!-- 9/28/2025 -->
+<!-- Assignment 4: Media & Interactivity
+ Synopsis: This a simple HTML webpage that is based off of my wireframe design.
+ My wireframe is meant to be a personal portfolio website that contains my professional information and projects.
+ Although there is not a significant amount of content, I want to focus on creating this webpage as best as I can.
+-->
+<!-- AI Information: None Used -->
+
+<head>
+
+    <!-- character encoding -->
+    <meta charset="UTF-8">
+     <!-- tab title -->
+    <title>About </title>
+
+</head>
+
+<!-- sample homepage -->
+<!-- based off of homepage_wireframe.png -->
+
+<body>
+
+    <!-- logo, resize for better fitment -->
+    <img src = "images/logo.png" alt = "Logo" width = "100" height = "100">
+
+    <!-- page title -->
+    <h1>About</h1>
+
+    <!-- page description -->
+     <p> 
+        This is supposed to be the about page in my portfolio website. 
+        <br> It will contain infromation about me and my skills
+     </p>
+
+     <table>
+        <head>
+            <tr>
+                <th>About</th> <!-- table header -->
+            </tr>
+        </head>
+        <tr> <!-- programming languages -->
+            <th colspan = "3">Skills</th>
+            <td><img src = "images/HTML5_logo_and_wordmark.svg.png" alt = "HTML5 Logo" width = "40" height="40"></td>
+            <td><img src = "images/CSS3_logo_and_wordmark.svg.png" alt = "CSS3 Logo" width = "40" height="40"></td>
+            <td><img src = "images/JavaScript_logo_and_wordmark.svg.png" alt = "JavaScript Logo" width = "40" height="40"></td>
+        </tr>
+        <tr> <!-- work experience -->
+            <th colspan ="3">Experience</th>
+            <td><img src = "images/kumon_logo.png" alt = "Kumon Logo" width = "40" height="40"></td>
+            <td><img src = "images/amgen_logo.png" alt = "Amgen Logo" width = "40" height="40"></td>
+        </tr>
+     </table>
+
+     <!-- embedded youtube video, disable autoplay -->
+     <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/ok-plXXHlWw?si=h5PhShy2y2D9vJPa;autoplay=0" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
+<form>
+    <h3>Email:</h3> <!-- email input field, required, maxlength 40 -->
+    <input type="email" id="email" name="email" placeholder = "Enter your email" required maxlength="40"/>
+    <br>
+    <h3>Message Attachments</h3>
+    <table>
+        <head>
+            <tr> <!-- checkbox "labels" -->
+                <th>Projects</th>
+                <th>Resume</th>
+                <th>References</th>
+            </tr>
+        </head>
+        <tr> <!-- checkbox inputs -->
+            <td> <input type="checkbox" id="proj" name="include" placeholder="include projects>"/> </td>
+            <td> <input type="checkbox" id="res" name="include" placeholder="include resume?"/> </td>
+            <td> <input type="checkbox" id="ref" name="include" placeholder="include references?"/> </td>
+        </tr>
+    </table>
+    <br> <!-- submit button, goes to product_site_v1.html -->
+    <input type = "submit" value = "Submit" formaction = "product_site_v1.html"/>
+</form> 
+
+</body>
+
+</html>
