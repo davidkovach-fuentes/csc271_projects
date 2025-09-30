@@ -37,11 +37,11 @@
      </p>
 
      <table>
-        <head>
+        <thead>
             <tr>
                 <th>About</th> <!-- table header -->
             </tr>
-        </head>
+        </thead>
         <tr> <!-- programming languages -->
             <th colspan = "3">Skills</th>
             <td><img src = "images/HTML5_logo_and_wordmark.svg.png" alt = "HTML5 Logo" width = "40" height="40"></td>
@@ -52,6 +52,7 @@
             <th colspan ="3">Experience</th>
             <td><img src = "images/kumon_logo.png" alt = "Kumon Logo" width = "40" height="40"></td>
             <td><img src = "images/amgen_logo.png" alt = "Amgen Logo" width = "40" height="40"></td>
+            <td></td>
         </tr>
      </table>
 
@@ -61,7 +62,6 @@
         height="315" 
         src="https://www.youtube.com/embed/ok-plXXHlWw?si=h5PhShy2y2D9vJPa;autoplay=0" 
         title="YouTube video player" 
-        frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
     </iframe>
@@ -72,17 +72,17 @@
     <br>
     <h3>Message Attachments</h3>
     <table>
-        <head>
+        <thead>
             <tr> <!-- checkbox "labels" -->
                 <th>Projects</th>
                 <th>Resume</th>
                 <th>References</th>
             </tr>
-        </head>
+        </thead>
         <tr> <!-- checkbox inputs -->
-            <td> <input type="checkbox" id="proj" name="include" placeholder="include projects>"/> </td>
-            <td> <input type="checkbox" id="res" name="include" placeholder="include resume?"/> </td>
-            <td> <input type="checkbox" id="ref" name="include" placeholder="include references?"/> </td>
+            <td> <input type="checkbox" id="proj" name="include"/> <td>
+            <td> <input type="checkbox" id="res" name="include"/> <td>
+            <td> <input type="checkbox" id="ref" name="include"/> </td>
         </tr>
     </table>
     <br> <!-- submit button, goes to product_site_v1.html -->
