@@ -13,7 +13,7 @@ body {
     background-color: wheat !important;
 } /* change bg color on page */
 
-#header {
+#page_title {
     text-align: left;
     background-color: aliceblue;
     font-size: 5cap;
