@@ -175,19 +175,9 @@ a {
 
     .social-menu {
         position: fixed;
-        bottom: 0;
+        bottom: 0px;
     }
 
     /* remove from top navbar and place at footer */
 
-}
-
-@media screen and (width > 600) {
-    #greeting {
-        background: linear-gradient(to left, var(--monokai-fg), #FCFAE2, #6A94AB);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-
-    /* add text gradient */
 }
