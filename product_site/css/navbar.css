@@ -1,0 +1,199 @@
+/*
+
+David Kovach-Fuentes
+Assignment 6: CSS Layout
+Description: This is the my current CSS styling for the navbar that I have
+implemented throughout my different pages. I used some internet references
+such as stack overflow but I wrote this code by myself.
+
+*/
+
+/* define variables */
+:root
+{
+    --monokai-black: #07091a;
+    --monokai-bg0: #090c2c;
+    --monokai-bg1: #2C2E34;
+    --monokai-bg2: #33353F;
+    --monokai-bg3: #414550;
+    --monokai-blue: #76CCE0;
+    --monoki-green: #9ED072;
+    --monokai-red: #FC5D7C;
+    --monokai-purple: #B39DF3;
+    --monokai-fg: #e2e2e3;
+}
+
+/* disable user selecting/highlighting texts */
+h1
+{
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -webkit-user-drag: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+body, main {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    background-color: var(--monokai-bg3);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* set wallpaper to fit entire screen */
+#wallpaper
+{
+  position: absolute;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  height: 100%;
+  width: 100%; 
+}
+
+/* set greeting to left side of the screen and margins */
+#greeting
+{
+    float: left;
+    text-align: left; text-justify: center;
+    color: var(--monokai-fg);
+    opacity: 0.85;
+    position: relative;
+    margin: 15% 2%;
+    font-size: 7em;
+}
+
+/* keep navbar at top of screen and turn into row */
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1em;
+    margin: 1em 1em;
+
+    z-index: 1000; /* magic number: always stay on top */
+    width: 98%;
+    height: fit-content;
+
+    background-color: var(--monokai-black);
+
+    /* containers turn into rows and space elements */
+    .navbar-menu, .social-menu, ul.navbar-menu-items
+    {
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* set padding and margins for the menus */
+    .navbar-menu, .social-menu
+    {
+        padding: 0 1em;
+        border-radius: 1em;
+        margin: 1em 1em;
+        background-color: var(--monokai-bg0);
+    }
+
+    /* remove list and set as inline */
+    ul.navbar-menu-items li
+    {
+        list-style: none;
+        display: inline-block;
+        font-size: 1.2em;
+    }
+
+    /* correct offset */
+    .social-menu ul.navbar-menu-items {
+        padding: 0px;
+    }
+
+    #logo {
+        align-content: center;
+    }
+
+    ul.navbar-menu-items {
+        gap: 24px;
+    }
+
+    /* remove link underlining */
+    a
+    {
+        text-decoration: none;
+    }
+
+    #home {
+        color: var(--monokai-red);
+    }
+
+    #about {
+        color: var(--monoki-green);
+    }
+
+    #projects {
+        color: var(--monokai-blue);
+    }
+
+    /* transition in hover/non-hover state; apply filter to grayscale icon*/
+    .icon
+    {
+        filter: brightness(0) saturate(100%) invert(53%) sepia(9%) saturate(427%) hue-rotate(185deg) brightness(96%) contrast(84%);
+        transition: filter 0.2s  ease-in-out;
+    }
+
+    /* red hover */
+    #git .icon:hover
+    {
+        filter: brightness(0) saturate(100%) invert(69%) sepia(49%) saturate(5977%) hue-rotate(312deg) brightness(98%) contrast(102%);
+    }
+
+    /* green hover */
+    #link .icon:hover
+    {
+        filter: brightness(0) saturate(100%) invert(93%) sepia(13%) saturate(1426%) hue-rotate(34deg) brightness(87%) contrast(86%);
+    }
+
+    /* blue hover */
+    #email .icon:hover
+    {
+        filter: brightness(0) saturate(100%) invert(76%) sepia(51%) saturate(376%) hue-rotate(153deg) brightness(90%) contrast(95%);
+    }
+
+}
+
+@media screen and (width <= 600px)
+{
+    #wallpaper
+    {
+        display: none;  
+    } /* hide wallpaper */
+
+    .navbar
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+    } /* allow for flexbox adjustment */
+
+    .social-menu
+    {
+        position: fixed;
+        bottom: 0px;
+    } /* remove from top navbar and place at footer */
+
+}
+
+@media screen and (width > 600)
+{
+    #greeting
+    {
+        background: linear-gradient(to left, var(--monokai-fg), #FCFAE2,#6A94AB);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+    } /* add text gradient */
+}

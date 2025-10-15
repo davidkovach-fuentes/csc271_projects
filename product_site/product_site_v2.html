@@ -27,20 +27,29 @@
 <body>
 
     <!-- navbar -->
-    <ul class = "navbar">
-        <!-- navigation links -->
-        <li>
-            <a href = "product_site_v1.html">Home</a>
-        </li>
-        <li>
-            <a href = "product_site_v2.html">About</a>
-        </li>
-        <li>Services </li>
-        <li>
-            <a href = "product_site_v3.html">Projects</a>
-        </li>
-        <li>Contact </li>
-    </ul>  
+        <nav class = "navbar">
+            <div class = "navbar-menu" draggable= "false">
+                <a id = "logo" href = "home.html"> <img src = "images/Apple_Home_(iOS).png" width= "30px" height= "30px" draggable = "false"> </a>
+                <ul class = "navbar-menu-items"> 
+                    <li draggable= "false"><a id = "home" class = "active" href = "home.html">Home</a></li>
+                    <li draggable= "false"><a id = "about" href = "product_site_v2.html">About</a></li>
+                    <li draggable = "false"><a id = "projects" href = "product_site_v3.html">Projects</a></li>
+                </ul>
+            </div>
+            <div class = "social-menu">
+                <ul class = "navbar-menu-items">
+                    <li><a id = "git" href = "#">
+                        <img class = "icon" src = "images/git-icon.svg" width = "30px" height = "30px" draggable = "false">
+                    </a></li>
+                    <li><a id = "link" href = "#">
+                        <img class = "icon" src = "images/link-icon.png" width = "30px" height = "30px" draggable = "false">
+                    </a></li>
+                    <li><a id = "email" href = "#">
+                        <img class = "icon" src = "images/email-icon.png" width = "30px" height = "30px" draggable = "false">
+                    </a></li>
+                </ul>                
+            </div>
+        </nav>
 
     <!-- logo, resize for better fitment -->
     <img src = "images/logo.png" alt = "Logo" width = "100" height = "100">

@@ -9,9 +9,7 @@ I was unfamiliar with the differences between display: grid, flex, etc so I aske
 'What attributes do I need to center this element on the screen?'
 */
 
-body {
-    background-color: wheat !important;
-} /* change bg color on page */
+@import url(navbar.css);
 
 #page_title {
     text-align: left;
@@ -30,22 +28,6 @@ body {
 * {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 } /* change font globally */
-
-.navbar {
-    display: flex;
-    justify-content: center; /* center the list horizontally */
-    align-items: center;     /* vertically center items within the list */
-    list-style: none;        /* remove default bullets */
-    gap: 10px;               /* space between list items */
-} /* navbar, ai helped generated attributes for page centering*/
-
-.navbar li {
-    display: inline-block;   /* keep items inline while allowing padding/margins */
-} /* navbar link */
-
-a:hover {
-    color: red;
-} /* highlight link in red on hover */
 
 a:active {
   color: blue;
