@@ -47,6 +47,7 @@ var signs = [ "Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "C
 var mySign = signs[5];
 var pSign1 = signs[5];
 var pSign2 = signs[0];
+
 var myMessage = "My zodiac sign is " + signs[mySign] + ". Kenneth's zodiac sign is: " + signs[pSign1] + ". Ty's sign is: " + signs[pSign2];
 var messages = ["Today is a day for new beginnings. Embrace change and seize opportunities.",
     "Your determination will lead to success today. Stay focused on your goals."

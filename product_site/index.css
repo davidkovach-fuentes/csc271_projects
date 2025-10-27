@@ -1,0 +1,163 @@
+/* Pixel Forest Color Scheme - Inspired by wallpaper */
+:root {
+  /* Primary Dark Colors (Forest Background) */
+  --primarmy-bg: #0e0d11;
+  --secondary-bg: #1c1b22;
+  --forest-black: #0f1419;
+  --forest-dark: #1a1f2e;
+  --forest-deep: #2d3748;
+  --forest-mid: #4a5568;
+
+  /* Cool Blues & Purples (Atmospheric) */
+  --atmosphere-blue: #2b6cb0;
+  --atmosphere-purple: #553c9a;
+  --atmosphere-teal: #319795;
+  --atmosphere-indigo: #4c51bf;
+
+  /* Warm Accents (Glowing Elements) */
+  --glow-orange: #f6ad55;
+  --glow-yellow: #faf089;
+  --glow-red: #fc8181;
+  --glow-warm: #ed8936;
+
+  /* Light Accents (Horizon Light) */
+  --horizon-light: #f7fafc;
+  --horizon-pale: #e2e8f0;
+  --horizon-soft: #cbd5e0;
+
+  /* Text Colors */
+  --text-primary: #f7fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #a0aec0;
+
+  /* Background Variations */
+  --bg-primary: var(--forest-dark);
+  --bg-secondary: var(--forest-deep);
+  --bg-accent: var(--forest-mid);
+
+  /* Border & Shadow */
+  --border-color: var(--atmosphere-teal);
+  --shadow-color: rgba(26, 31, 46, 0.8);
+  --glow-shadow: rgba(246, 173, 85, 0.3);
+
+  --ratio: 1.75;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+}
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html,
+body,
+.wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: block;
+  list-style: none;
+  width: 100%;
+  height: fit-content; /* Takes up 15% of viewport height */
+  position: absolute;
+  z-index: 1;
+}
+
+.wrapper {
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-wrapper {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--forest-black);
+  z-index: 999;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.nav-links, .nav-icons {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  background-color: var(--secondary-bg);
+}
+
+.nav-links
+{
+    width: fit-content;
+    flex-grow: 0;
+}
+
+.nav-icons
+{
+    margin-left: auto;
+    margin-right: var(--s1);
+    align-content: center;
+}
+
+.nav-links > *
+{
+    margin: 0 calc(var(--s-1) + var(--s-2));
+    font-size: calc(var(--s0) + var(--s-1));
+    text-decoration: none;
+}
+
+.nav-icon {
+    width: var(--s2); height: var(--s2);
+    margin: 0 var(--s1);
+    align-self: center;
+}
+
+#logo
+{
+    width: fit-content;
+    flex-grow: 0;
+    width: var(--s4); height: var(--s4);
+}
+
+/* Hero section fills remaining 85% of screen */
+#wallpaper {
+    position: fixed;
+    top: 0;
+    background-image: url("images/wallpaper.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%; /* Fills remaining 85% of viewport height */
+    width: 100%;
+    top: 15vh; /* Starts after the header */
+    overflow: hidden;
+}
+
+hero {
+    display: block;
+    width: 100%; 
+    height: auto; /* Fills remaining 85% of viewport height */
+    position: relative;
+    z-index: 1;
+}
