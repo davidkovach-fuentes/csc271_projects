@@ -159,3 +159,24 @@ table
         flex-wrap: wrap !important;
     }
 }
+
+@keyframes pulsate {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pulsating {
+  animation: pulsate 1.5s ease-in-out infinite;
+  transition: background-color 0.5s ease;
+}
+
+/* Smooth color transitions */
+#home, #about, #contact {
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+#home:hover, #about:hover, #contact:hover {
+  transform: scale(1.05);
+}
