@@ -1,8 +1,12 @@
 // david kovach-fuentes
-// script idea
+// script idea && modular functions
 // create a script that adds to the greeting message on the homepage
 // updates with the day of week and check to see if I am within "working" hours or not
+// modular functions to update homepage and HTML element content
 // did not use AI but used google to find out how to get the data
+
+
+
 var count = 0;
 const date = new Date();
 const hr = date.getHours();
@@ -16,18 +20,31 @@ const months = [
 ];
 const day = days[date_index]; // select date
 
+// helper function
+function updateContent(target, html) {
+  target.innerHTML = html;
+  return target;
+}
 
 var greeting = document.querySelector("h3"); // select first h3 title which is greeting
 var msg = document.getElementById("return-msg"); // select by id
 var also_greeting = document.getElementsByClassName("title")[1]; // select the second 'title element' which is the greeting
 
-greeting.textContent = "today is " + day; // updating day of week
-also_greeting.textContent += ", " + months[mth] + " " + dt; // add month and day
+// Basic, no-parameter function to refresh the home UI. Uses existing variables.
+function updateHome() {
+  // update the greeting (keep it as an <h3> inside the selected element)
+  updateContent(greeting, "<h3>today is " + day + "</h3>");
+  // update the secondary greeting text
+  also_greeting.textContent = ", " + months[mth] + " " + dt;
+  // update status message
+  if (am_awake) updateContent(msg, "currently awake");
+  else updateContent(msg, "currently sleeping...");
+}
 
+// call the basic updater once
+updateHome();
 
 const am_awake = (hr - 22) <= 0 && hr > 7; // check if hour is not between 11:00 (23:00) and 7:00 AM (7:00) and update
-if (am_awake) msg.innerHTML = msg.innerHTML = "<h2 id='return-msg' class='title text-s2 text-nord5 ml-s1'>currently awake</h2>";
-else msg.innerHTML = "<h2 id='return-msg' class='title text-s2 text-nord5 ml-s1'>currently sleeping...</h2>";
 
 
 

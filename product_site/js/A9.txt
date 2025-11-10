@@ -1,0 +1,3 @@
+main: https://github.com/davidkovach-fuentes/csc271_projects
+produt_site_v7: https://github.com/davidkovach-fuentes/csc271_projects/tree/product_site_v7
+cpanel: https://davidkovachfuentes.rhody.dev/csc271_projects/product_site/index.html
