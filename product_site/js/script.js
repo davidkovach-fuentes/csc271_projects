@@ -22,7 +22,7 @@ const day = days[date_index]; // select date
 
 // helper function
 function updateContent(target, html) {
-  target.innerHTML = html;
+  target.innerHTML = html; // change HTML and return
   return target;
 }
 
@@ -30,9 +30,9 @@ var greeting = document.querySelector("h3"); // select first h3 title which is g
 var msg = document.getElementById("return-msg"); // select by id
 var also_greeting = document.getElementsByClassName("title")[1]; // select the second 'title element' which is the greeting
 
-// Basic, no-parameter function to refresh the home UI. Uses existing variables.
+// update home
 function updateHome() {
-  // update the greeting (keep it as an <h3> inside the selected element)
+  // update the greeting
   updateContent(greeting, "<h3>today is " + day + "</h3>");
   // update the secondary greeting text
   also_greeting.textContent = ", " + months[mth] + " " + dt;
@@ -41,7 +41,6 @@ function updateHome() {
   else updateContent(msg, "currently sleeping...");
 }
 
-// call the basic updater once
 updateHome();
 
 const am_awake = (hr - 22) <= 0 && hr > 7; // check if hour is not between 11:00 (23:00) and 7:00 AM (7:00) and update
