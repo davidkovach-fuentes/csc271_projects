@@ -29,21 +29,20 @@ function updateContent(target, html) {
 var greeting = document.querySelector("h3"); // select first h3 title which is greeting
 var msg = document.getElementById("return-msg"); // select by id
 var also_greeting = document.getElementsByClassName("title")[1]; // select the second 'title element' which is the greeting
+const am_awake = (hr - 22) <= 0 && hr > 7; // check if hour is not between 11:00 (23:00) and 7:00 AM (7:00) and update
 
 // update home
 function updateHome() {
   // update the greeting
-  updateContent(greeting, "<h3>today is " + day + "</h3>");
+  greeting.textContent = "today is " + day;
   // update the secondary greeting text
-  also_greeting.textContent = ", " + months[mth] + " " + dt;
+  also_greeting.textContent += ", " + months[mth] + " " + dt;
   // update status message
   if (am_awake) updateContent(msg, "currently awake");
   else updateContent(msg, "currently sleeping...");
 }
 
 updateHome();
-
-const am_awake = (hr - 22) <= 0 && hr > 7; // check if hour is not between 11:00 (23:00) and 7:00 AM (7:00) and update
 
 
 
