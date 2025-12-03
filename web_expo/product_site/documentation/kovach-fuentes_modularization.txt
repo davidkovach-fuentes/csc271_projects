@@ -1,0 +1,9 @@
+Modular Functino: updateContent
+
+Throughout my script, I noticed that I frequently use .innerHTML to change the innerHTML content of an element. It would make sense to have one function
+to control everything and to specify the element and the new content as the parameters.
+
+It make sense to convert these into a function to make the code more concise and also more readable.
+
+updateContent(target, html) where target is the target element from the DOM and html is the updated innerHTML string
+updateHome() a void function that just updates the homepage everytime it is loaded in the script

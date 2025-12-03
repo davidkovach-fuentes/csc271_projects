@@ -1,0 +1,3 @@
+Create an event handler to detect when the mouse hovers over the active tab, dehighlight the other tabs and highlight the active tab. Also apply for the reverse/
+
+Create an event handler to display a success message if the form is submitted (in console). If the form is incomplete, display error.

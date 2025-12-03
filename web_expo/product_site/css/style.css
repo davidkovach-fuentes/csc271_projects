@@ -1,0 +1,95 @@
+@import url(nav.css);
+
+/* Pixel Forest Color Scheme - Inspired by wallpaper */
+:root {
+    /* Primary Dark Colors (Forest Background) */
+    --forest-black: #0f1419;
+    --forest-dark: #1a1f2e;
+    --forest-deep: #2d3748;
+    --forest-mid: #4a5568;
+    
+    /* Cool Blues & Purples (Atmospheric) */
+    --atmosphere-blue: #2b6cb0;
+    --atmosphere-purple: #553c9a;
+    --atmosphere-teal: #319795;
+    --atmosphere-indigo: #4c51bf;
+    
+    /* Warm Accents (Glowing Elements) */
+    --glow-orange: #f6ad55;
+    --glow-yellow: #faf089;
+    --glow-red: #fc8181;
+    --glow-warm: #ed8936;
+    
+    /* Light Accents (Horizon Light) */
+    --horizon-light: #f7fafc;
+    --horizon-pale: #e2e8f0;
+    --horizon-soft: #cbd5e0;
+    
+    /* Text Colors */
+    --text-primary: #f7fafc;
+    --text-secondary: #e2e8f0;
+    --text-muted: #a0aec0;
+    
+    /* Background Variations */
+    --bg-primary: var(--forest-dark);
+    --bg-secondary: var(--forest-deep);
+    --bg-accent: var(--forest-mid);
+    
+    /* Border & Shadow */
+    --border-color: var(--atmosphere-teal);
+    --shadow-color: rgba(26, 31, 46, 0.8);
+    --glow-shadow: rgba(246, 173, 85, 0.3);
+}
+
+h1 {
+    z-index: 999;
+}
+
+#wallpaper {
+    z-index: -999;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+form table {
+    width: 100%;
+    max-width: 550px;
+    border: 0;
+    border-collapse: collapse;
+}
+
+form table td {
+    font-size: var(--s2);
+    padding: 8px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    max-width: 250px;
+    background-color: var(--nord4);
+    border: 1px solid var(--nord4);
+    color: var(--nord0);
+    padding: 4px;
+}
+
+form textarea {
+    max-width: 350px;
+}
+
+form input[type="submit"] {
+    background-color: var(--nord4);
+    color: var(--nord0);
+    border: 1px solid var(--nord4);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: var(--s2);
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--nord5);
+    border-color: var(--nord5);
+}
