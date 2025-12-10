@@ -139,6 +139,12 @@ table {
   background-color: black;
 }
 
+textarea, input
+{
+  background-color: var(--nord0);
+  color: var(--nord4);
+}
+
 @media screen and (width <=600px) {
   .container {
     flex-wrap: wrap !important;
@@ -180,3 +186,4 @@ table {
 #projects:hover {
   transform: scale(1.1);
 }
+
