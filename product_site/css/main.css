@@ -1,6 +1,18 @@
 @import url(nav.css);
 @import url(utilities.css);
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
+}
+
 html,
 body {
   width: 100vw;
@@ -22,17 +34,20 @@ body {
     justify-content: initial !important;
 }
 
-hero, #mcmansion_blog
+.hero, 
+#mcmansion_blog
 {
   display: block;
+  align-content: center;
   width: inherit;
   height: calc(100svh - 20%);
 }
 
-hero > *, #mcmansion_blog > *
+.hero > *, 
+#mcmansion_blog > *
 {
   display: block;
-  margin-inline: 30%;
+  margin-inline: 25%;
   margin-block: var(--s1);
   line-height: calc(1.25* var(--s1));
   align-content: center;
@@ -41,12 +56,12 @@ hero > *, #mcmansion_blog > *
   color: var(--nord4);
 }
 
-hero > h1
+.hero > h1
 {
   font-size: 2.2em;
 }
 
-hero > p
+.hero > p
 {
   font-size: 1.1em;
 }
@@ -68,6 +83,12 @@ main > *
   align-items: center;
   text-justify: center;
   color: var(--nord4);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .emb-link
@@ -106,6 +127,12 @@ main > *
   text-decoration: none;
 }
 
+.h-divider
+{
+  background-color: white;
+  height: 1px;
+}
+
 .heading-cell
 {
   padding: calc(var(--s-1) + var(--s-2));
@@ -113,11 +140,40 @@ main > *
   background-color: #0b0b0f;
 }
 
+#content {
+  position: relative;
+  height: 100%;
+  margin-top: var(--s4);
+  margin-bottom: var(--s-2);
+}
+
+.active {
+  background-color: var(--nord9);
+  color: var(--nord5);
+}
+
+table {
+  display: flex;
+  background-color: black;
+}
+
+textarea, input
+{
+  background-color: var(--nord0);
+  color: var(--nord4);
+}
+
+@media screen and (width <=600px) {
+  .container {
+    flex-wrap: wrap !important;
+  }
+}
+
 @media screen and (width <= 600px) {
     html, body {
         overflow: scroll !important;
     }
-    hero > * {
+    .hero > * {
       max-width: 15ch;
     }
 }

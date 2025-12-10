@@ -1,44 +1,90 @@
 @import url(utilities.css);
 
-/* Nav-specific styles only. Global/layout rules were moved to main.css. */
+/* navbar */
 
 header {
-  position: sticky;
   top: 0;
+  position: sticky;
+  display: block;
   width: 100%;
   z-index: 9999;
-  display: block;
   align-items: center;
   background-color: black;
 }
 
-/* Nav container/layout inside header */
+#nav-menu {
+  gap: 1em !important;
+  margin-left: calc(auto - var(--s4));
+  width: fit-content;
+}
+
+#nav-menu>a {
+  font-size: var(--s1);
+}
+
+/* page margins */
 header > .container {
   display: inline-flex;
   width: 80%;
   overflow: hidden;
   margin: 0 10%;
-  margin-top: var(--s1);
-  align-content: center;
 }
 
-header > .container > *:not(:last-child) {
+/* align to leftside of navbar */
+header>.container>*:not(:last-child) {
   flex-grow: 0;
+}
+
+header>.container {
+  margin-top: var(--s1);
+  align-content: center;
 }
 
 header img:not(#logo) {
   filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(357%) hue-rotate(192deg) brightness(102%) contrast(91%);
 }
 
-.nav-icon {
-  vertical-align: calc(-1 * var(--s-3));
+.filter-white {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(357%) hue-rotate(192deg) brightness(102%) contrast(91%);
 }
 
-/* Pulsating animation for nav items */
-@keyframes pulsate { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.02); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
+.nav-icon {
+  vertical-align: calc(-1*var(--s-3));
+}
 
-.pulsating { animation: pulsate 2.5s ease-in-out infinite; transition: background-color 2.5s ease; }
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
 
-/* Smooth color transitions and hover for common nav IDs */
-#home, #about, #projects { transition: background-color 0.5s ease, transform 0.3s ease; }
-#home:hover, #about:hover, #projects:hover { transform: scale(1.1); }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pulsating {
+  animation: pulsate 2.5s ease-in-out infinite;
+  transition: background-color 2.5s ease;
+}
+
+/* Smooth color transitions */
+#home,
+#about,
+#projects {
+  transition: background-color 5s ease, transform 4.6s ease;
+}
+
+/* Hover effect */
+#home:hover,
+#about:hover,
+#projects:hover {
+  transform: scale(1.1);
+}
+
