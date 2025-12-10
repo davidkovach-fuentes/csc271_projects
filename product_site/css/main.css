@@ -34,7 +34,8 @@ body {
     justify-content: initial !important;
 }
 
-.hero, 
+.hero,
+#contact-page,
 #mcmansion_blog
 {
   display: block;
@@ -43,7 +44,8 @@ body {
   height: calc(100svh - 20%);
 }
 
-.hero > *, 
+.hero > *,
+contact-page > *,
 #mcmansion_blog > *
 {
   display: block;
