@@ -2,72 +2,107 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>dkf home</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<html lang = "en">
 
-  <body>
-    <!--[if lt IE 7]>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>David Kovach-Fuentes</title>
+  <meta name="description" content="Index Page for David Kovach-Fuentes's Personal Website" />
+  <meta name = "author" content = "David Kovach-Fuentes"/>
+  <meta name = "keywords" content = "david kovach-fuentes, kovach-fuentes, kovach-fuentes contact, kovach-fuentes resume">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    <!-- navbar -->
-    <header class = "shadow-dreamy">
-      <div class="container bg-nord0">
-        <img
-          id="logo"
-          src="images/logo.png"
-          class="w-s4 h-s4"
-          alt="web logo"
-        />
-        <div class="menu bg-nord2 p-s-2">
-          <a href="index.html" id = "home" class = "active text-s2 text-nord5">Home</a>
-          <a href="about.html" id ="about" class = "text-s2 text-nord5">About</a>
-          <a href="projects.html" id = "projects" class = "text-s2 text-nord5">Projects</a>
+
+  <!-- navbar -->
+  <header>
+    <div class="container">
+      <img id="logo" src="images/logo.png" class="w-s4 h-s4" alt="web logo" />
+      <nav>
+        <div class="container" id="nav-menu">
+          <a href="index.html" id="home" class="active text-s2 text-nord5">Home</a>
+          <a href="portfolio.html" id="about" class="text-s2 text-nord5">About</a>
+          <a href="contact.html" id="projects" class="text-s2 text-nord5">Contact</a>
+          <a href="https://github.com/"><img src="images/git-icon.svg" class="nav-icon w-s1 h-s1"
+              alt="git profile icon" /></a>
+          <a href="mailto:david.kovachfuentes@gmail.com"><img src="images/Gmail_icon_(2020).svg"
+              class="nav-icon w-s1 h-s1" alt="email address icon" /></a>
         </div>
-        <div class="container gap-s2 mr-s1">
-          <a href="https://github.com/">
-            <div class="cell bg-nord2">
-              <img
-                src="images/git-icon.svg"
-                class="w-s2 h-s2"
-                alt="git profile icon"
-              /></div
-          ></a>
-          <a href="mailto:david.kovachfuentes@gmail.com">
-            <div class="cell bg-nord2">
-              <img
-                src="images/Gmail_icon_(2020).svg"
-                class="w-s2 h-s2"
-                alt="email address icon"
-              /></div
-          ></a>
-        </div>
-      </div>
-    </header>
-    <!-- main window -->
-    <div class="stack" id="wallpaper">
-      <h1 class= "title text-s5 text-nord5 ml-s3">welcome</h1>
-      <h3 class = "title text-s3 text-nord5 ml-s3">today is {}</h3>
-      <h2 id = "return-msg" class = "title text-s2 text-nord5 ml-s3">currently sleeping...</h2>
+      </nav>
     </div>
-    <!-- footer -->
-    <footer>.</footer>
-    <script src="js/script.js" async defer></script>
-    <script src= "js/nav-buttons.js"></script>
-  </body>
+  </header>
+
+  <!-- main window -->
+  <div id="wallpaper"></div>
+  <!-- hero section -->
+  <div class = "hero">
+    <hr class = "h-divider">
+    <!-- header text -->
+    <h1>David Kovach-Fuentes</h1>
+    <h2 style = "color: var(--nord14);">Chicago & Providence</h2>
+    <!-- blurb -->
+    <p>Hi! I'm David Kovach-Fuentes; an undergraduate studying Computer Science with an interest in SWE</p>
+    <!-- current pl -->
+    <p>Proficient in
+      <span class="emb-link"><span class="img-link img-link-icon"
+          style="background-image: url(images/cpp_logo.svg);" alt = "C++ icon"></span>C++</span>
+      <span class="emb-link"><span class="img-link img-link-icon"
+          style="background-image: url(images/plt-logo-red-shiny.svg);" alt = "scheme icon"></span>Scheme</span>
+      <span class="emb-link"><span class="img-link img-link-icon"
+          style="background-image: url(images/Python.svg.png);" alt = "Python icon"></span>Python</span>
+      <span class="emb-link"><span class="img-link img-link-icon"
+          style="background-image: url(images/Apple_logo_white.svg.png); background-size: contain !important;" alt = "Objective C icon"></span>Objective
+        C</span>
+    </p>
+    <!-- learning pl -->
+    <p>Currently Learning
+      <span class="emb-link"><span class="img-link img-link-icon"
+          style="background-image: url(images/HTML5_logo_and_wordmark.svg.png);" alt =  "HTML icon"></span>HTML</span>
+      <span class="emb-link"><span class="img-link img-link-icon"
+          style="background-image: url(images/CSS3_logo_and_wordmark.svg.png);" alt = "CSS icon"></span>CSS</span>
+      <span class="emb-link"><span class="img-link img-link-icon"
+          style="background-image: url(images/JavaScript_logo_and_wordmark.svg.png);" alt = "JavaScript icon"></span>JavaScript</span>
+      <span class="emb-link"><span class="img-link img-link-icon"
+          style="background-image: url(images/swift-256x256_2x.png);" alt = "Swift icon"></span>Swift</span>
+    </p>
+    <!-- personal introduction -->
+    <p>In my spare time, I like exploring the city and architectural sightseeing/appreciation.
+      I am especially interested in lost architecture of any style, and I find equal amusement in McMansion spotting.
+    </p>
+    <p>
+      I find equal amusement in McMansion spotting, which I generally source form McMansion Hell.
+      I have a gallery of my favorite mansions that you can find here.</p>
+    <!-- blog posts -->
+    <p>Blog Posts: <br>
+      <a href = "mcmansion_blog.html" class = "text-nord12" style = "position: inherit; margin-left: 1em;">* What is a McMansion? </a> <br>
+    </p>
+    <!-- social links -->
+    <p>Connect with me through:
+      <a class="emb-link filter-white" href="https://www.github.com/"><span class="img-link img-link-icon"
+          style="background-image: url(images/git-icon.svg); background-size: contain !important;" alt = "github icon"></span>github</a>
+      <a class="emb-link filter-white" href="https://www.linkedin.com/"><span class="img-link img-link-icon"
+          style="background-image: url(images/link-icon.png); background-size: contain !important;" alt = "linkedIn icon"></span>linkedIn</a>
+      <a class="emb-link filter-white" href="mailto:david.kovachfuentes@gmail.com"><span class="img-link img-link-icon"
+          style="background-image: url(images/Gmail_icon_\(2020\).svg); background-size: contain !important;" alt = "gmail icon"></span>email</a>
+    </p>
+    <hr class = "h-divider">
+  </div>
+
+  <!-- footer -->
+  <script src = "js/nav-buttons.js"></script>
+</body>
+
 </html>

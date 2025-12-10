@@ -1,0 +1,15 @@
+What the object represents on your product site.
+
+  The object I will represent will be the navigator link as its own object.
+  Using different nav-links will make it more readable when implementing nav-buttons.js
+
+The data you need to store about this type of object (its properties).
+
+  I will store the title and the link url
+  I will also store a boolean to indicate if the link is active
+
+The tasks or behaviors the object should be able to perform (its methods).
+
+  I will include a method pulsate() to handle pulsating for the link
+  I will also include the changeColor() method as well for its respective function
+

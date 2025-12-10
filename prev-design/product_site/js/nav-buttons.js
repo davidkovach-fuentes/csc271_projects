@@ -126,6 +126,7 @@ for (var i = 0; i < navLinks.length; i++) {
     }
 }
 
+const title = document.getElementsByTagName("h1")[0];
 const form = document.querySelector('form'); // get form
 if (form) {
     form.addEventListener('submit', function () {
@@ -140,7 +141,7 @@ if (form) {
             return false;
         } // missing form marks as error, failed submission
 
-        console.log('success');
+        title.log('success');
         alert('form submitted successfully'); // successful submission
     });
 }

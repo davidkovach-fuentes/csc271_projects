@@ -1,182 +1,90 @@
 @import url(utilities.css);
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
-
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-
-}
-
-/* set wallpaper to fit entire screen */
-#wallpaper {
-    position: absolute;
-    z-index: 0;
-    background-image: url("../images/wallpaper.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    justify-content: initial !important;
-}
-
-
-html,
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
 /* navbar */
 
 header {
   top: 0;
   position: sticky;
   display: block;
-  width: 100vw;
+  width: 100%;
   z-index: 9999;
-  background-color: var(--nord0);
   align-items: center;
+  background-color: black;
 }
 
-body {
-  background-color: var(--nord0);
-}
-
-footer {
-  display: block;
-  margin-bottom: var(--s2);
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.stack {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 100%;
-  justify-content: space-around;
+#nav-menu {
+  gap: 1em !important;
+  margin-left: calc(auto - var(--s4));
   width: fit-content;
 }
 
-.shadow-dreamy {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
-    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
-    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
-}
-
-.cell {
-  gap: var(--s2);
-  align-content: center;
-  justify-content: center;
-  padding: var(--s-4);
-  border-radius: var(--s-2);
-}
-
-.-r {
-  align-self: flex-end;
-}
-
-.-l {
-  align-self: flex-start;
-}
-
-.w100 {
-  width: 100% !important;
-}
-
-.no-align {
-    align-self: normal;
+#nav-menu>a {
+  font-size: var(--s1);
 }
 
 /* page margins */
-header > .container,
-#content {
-  margin: 0 var(--s1);
+header > .container {
+  display: inline-flex;
+  width: 80%;
+  overflow: hidden;
+  margin: 0 10%;
 }
 
 /* align to leftside of navbar */
-header > .container > *:not(:last-child) {
+header>.container>*:not(:last-child) {
   flex-grow: 0;
 }
 
-/* align to right side of navbar */
-header > .container > *:last-child {
-  margin-left: auto;
-}
-
-header > .container {
+header>.container {
   margin-top: var(--s1);
   align-content: center;
 }
 
 header img:not(#logo) {
-  filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(357%)
-    hue-rotate(192deg) brightness(102%) contrast(91%);
+  filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(357%) hue-rotate(192deg) brightness(102%) contrast(91%);
 }
 
-.stack {
-  gap: var(--s4);
+.filter-white {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(357%) hue-rotate(192deg) brightness(102%) contrast(91%);
 }
 
-#content {
-  position: relative;
-  height: 100%;
-  margin-top: var(--s4);
-  margin-bottom: var(--s-2);
-}
-
-a
-{
-    text-decoration: none;
-}
-
-.active
-{
-    background-color: var(--nord6);
-    color: var(--nord3);
-}
-
-table
-{
-    display: flex;
-    background-color: var(--nord3);
-}
-
-@media screen and (width <= 600px) {
-    .container {
-        flex-wrap: wrap !important;
-    }
+.nav-icon {
+  vertical-align: calc(-1*var(--s-3));
 }
 
 @keyframes pulsate {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.8; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.02);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .pulsating {
-  animation: pulsate 1.5s ease-in-out infinite;
-  transition: background-color 0.5s ease;
+  animation: pulsate 2.5s ease-in-out infinite;
+  transition: background-color 2.5s ease;
 }
 
 /* Smooth color transitions */
-#home, #about, #contact {
-  transition: background-color 0.5s ease, transform 0.3s ease;
+#home,
+#about,
+#projects {
+  transition: background-color 5s ease, transform 4.6s ease;
 }
 
 /* Hover effect */
-#home:hover, #about:hover, #contact:hover {
-  transform: scale(1.05);
+#home:hover,
+#about:hover,
+#projects:hover {
+  transform: scale(1.1);
 }
+
